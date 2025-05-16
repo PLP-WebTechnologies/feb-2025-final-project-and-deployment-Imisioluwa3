@@ -447,6 +447,7 @@ form button {
 textarea{
     background: none;
     padding: 10px 0;
+    color: var(--text-color);
 }
 
 #ta-img img {
