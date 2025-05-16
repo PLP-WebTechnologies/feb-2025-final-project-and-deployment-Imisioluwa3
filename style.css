@@ -379,10 +379,96 @@ form button {
 
 
 
+/* Contact Page */
 
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width: 100%;
+    border: 2px solid var(--text-color);
+    width: 1000p;
+}
 
+.mNf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
 
+.details {
+    display: flex;
+    gap: 40px;
+    /* border: 2px solid red; */
+}
 
+.address {
+    display: flex;
+    flex-direction: column;
+}
+
+.address h2 {
+    margin-bottom: 20px;
+}
+
+.phone {
+    display: flex;
+    flex-direction: column;
+}
+
+.phone h2 {
+    margin-bottom: 20px;
+}
+
+.phone a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.form-label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid var(--text-color);
+}
+
+.form-label img {
+    width: 30px;
+    height: 30px;
+}
+
+#ta-img {
+    display: flex;
+    border: 2px solid var(--text-color);
+    gap: 10px;
+}
+
+textarea{
+    background: none;
+    padding: 10px 0;
+}
+
+#ta-img img {
+    width: 30px;
+    height: 30px;
+}
+
+#message {
+    min-height: 200px;
+}
+
+#name {
+   border: none;
+}
+
+#email {
+   border: none;
+}
+
+#message {
+   border: none;
+}
 
 
 
@@ -402,11 +488,11 @@ form button {
 
 
 /* Responsive Design */
-/* @media (max-width: 1200px){
-    .services {
-        flex-wrap: wrap;
+@media (max-width: 660px){
+    .mNf {
+        flex-direction: column;
     }
-} */
+}
 
 @media (max-width: 950px){
     .hero {
