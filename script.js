@@ -16,18 +16,53 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// document.addEventListener('scroll', function() {
-//     const scrollPosition = window.scrollY;
-//     const sections = document.querySelectorAll('section');
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Get all navigation links
 //     const navLinks = document.querySelectorAll('.navbar-menu a');
-
-//     sections.forEach((section, index) => {
-//         if (scrollPosition >= section.offsetTop - 50 && scrollPosition < section.offsetTop + section.offsetHeight) {
-//             navLinks.forEach(link => link.classList.remove('active'));
-//             navLinks[index].classList.add('active');
+    
+//     // Get current page file name
+//     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    
+//     // Add active class based on current page
+//     navLinks.forEach(link => {
+//         // Get the href attribute
+//         const href = link.getAttribute('href');
+        
+//         // Check if this is the current page
+//         if (href === currentPage) {
+//             link.classList.add('active');
+//         } else if (currentPage === '' && href === 'index.html') {
+//             // Special case for root URL
+//             link.classList.add('active');
+//         } else {
+//             link.classList.remove('active');
 //         }
 //     });
-// })
+// });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.navbar-menu a');
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    
+    navLinks.forEach(link => {
+        const linkHref = link.getAttribute('href');
+        
+        // Check if the link matches the current page
+        if (linkHref === currentPage) {
+            link.classList.add('active');
+        } else {
+            // Special case for index.html/root URL
+            if ((currentPage === 'index.html' || currentPage === '') && linkHref === 'index.html') {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        }
+    });
+});
+
+
+
 
 const yearEl = document.querySelector('.year');
 const year = new Date().getFullYear();

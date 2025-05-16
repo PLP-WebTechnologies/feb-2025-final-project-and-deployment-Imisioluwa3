@@ -313,7 +313,40 @@ form button {
 
 
 
+/* About Page */
 
+.about-text {
+    margin: 50px 0;
+}
+
+#ab {
+    padding: 20px;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+.team-img {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;  
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
