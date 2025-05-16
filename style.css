@@ -336,7 +336,7 @@ form button {
 .team-img {
     width: 250px;
     height: 250px;
-    margin: 0 auto;  
+    margin: 0 auto 20px;  
     object-fit: cover;
     border-radius: 50%;
 }
@@ -349,7 +349,33 @@ form button {
 }
 
 
+/* Services Page */
 
+.serv {
+    display: flex;
+    flex-direction: column;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 0; 
+
+}
+
+.card {
+    background-color: var(--section-color);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    flex: 1 1 300px;      /* Grow, shrink, min width */
+    max-width: 400px;     /* Prevents cards from getting too wide */
+    width: 100%;
+    margin: 10px;
+    box-sizing: border-box;
+}
 
 
 
@@ -376,6 +402,12 @@ form button {
 
 
 /* Responsive Design */
+/* @media (max-width: 1200px){
+    .services {
+        flex-wrap: wrap;
+    }
+} */
+
 @media (max-width: 950px){
     .hero {
         flex-direction: column;
@@ -391,6 +423,15 @@ form button {
 
     .hero-text {
         padding: 0;
+    }
+
+        .services {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        max-width: 90vw;
+        width: 100%;
     }
 }
 
