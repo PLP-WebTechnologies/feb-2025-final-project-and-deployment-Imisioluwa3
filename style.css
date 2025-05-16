@@ -8,7 +8,7 @@
 
 :root{
     --theme-color: #4e4444;
-    --text-color: seashell;
+    --text-color: #fff5ee;
     --img-bg: #161719;
     --section-color: #111113;
 }
@@ -20,6 +20,21 @@ body {
     background-color: var(--theme-color);
     color: var(--text-color);
     line-height: 1.5;
+}
+
+.preloader {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #161719;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+.preloader.hide {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
 }
 
 header {
